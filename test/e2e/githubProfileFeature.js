@@ -26,11 +26,3 @@ describe('Github Profile finder', function() {
     expect(profiles.last().getText()).toEqual('SpikeTheMaster'); //This is, again, wrong.
   });
 });
-
-  // it('finds profiles', function() {
-  //   searchBox.sendKeys('spike01');
-  //   searchButton.click();
-
-  //   expect(element(by.binding('user.login')).getText()).
-  //     toEqual('spike01');
-  // });
