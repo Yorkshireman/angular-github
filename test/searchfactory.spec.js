@@ -28,4 +28,4 @@ describe('factory: Search', function() {
       });
     httpBackend.flush();  
   });
-})
+});
