@@ -17,4 +17,20 @@ describe('Github Profile finder', function() {
     expect(element(by.binding('user.login')).getText()).
       toEqual('spike01');
   });
+
+  it('finds the last Spike', function() { //this is a silly test, but roll with it
+    searchBox.sendKeys('spike');
+    searchButton.click();
+
+    var profiles = element.all(by.repeater('user in searchCtrl.searchResult.items'));
+    expect(profiles.last().getText()).toEqual('SpikeTheMaster'); //This is, again, wrong.
+  });
 });
+
+  // it('finds profiles', function() {
+  //   searchBox.sendKeys('spike01');
+  //   searchButton.click();
+
+  //   expect(element(by.binding('user.login')).getText()).
+  //     toEqual('spike01');
+  // });
