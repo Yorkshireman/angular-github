@@ -9,10 +9,10 @@ app.set('views', __dirname + '/');
 app.use('/bower_components',  express.static(__dirname + '/bower_components'));
 app.use('/js',  express.static(__dirname + '/js'));
 app.use('/bootstrap_css_overrides',  express.static(__dirname + '/bootstrap_css_overrides'));
-githubToken = process.env.GITHUB_TOKEN
 
 
 app.get('/', function (req, res) {
+  githubToken = process.env.GITHUB_TOKEN
   res.render('index');
 });
 
