@@ -2,6 +2,7 @@ githubUserSearch.controller('GitUserSearchController', ['$resource', function($r
   var self = this;
 
   var searchResource = $resource('https://api.github.com/search/users/');
+  var githubToken=process.env.GITHUB_TOKEN;
 
   self.doSearch = function() {
     self.searchResult = searchResource.get(
