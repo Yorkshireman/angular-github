@@ -12,6 +12,7 @@ app.use('/bootstrap_css_overrides',  express.static(__dirname + '/bootstrap_css_
 
 
 app.get('/', function (req, res) {
+  githubToken = process.env.GITHUB_TOKEN
   res.render('index');
 });
 
