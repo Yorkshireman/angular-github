@@ -11,7 +11,7 @@ describe('factory: Search', function() {
   beforeEach(inject(function($httpBackend) {
     httpBackend = $httpBackend;
     httpBackend
-      .when("GET", "https://api.github.com/search/users?access_token=" + githubToken + '&q=hello')
+      .when("GET", "https://api.github.com/search/users?access_token=" + githubTokenFromSecretsJs + '&q=hello')
       .respond(
         { items: items }
       );
