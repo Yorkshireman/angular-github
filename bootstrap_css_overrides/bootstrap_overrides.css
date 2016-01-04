@@ -6,3 +6,7 @@ body {
   max-width: 60%;
   text-align: center;
 }
+
+ul {
+  list-style-type: none;
+}
